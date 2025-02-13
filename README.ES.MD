@@ -5,9 +5,9 @@ Bienvenido a mi repositorio **Random Scripts**. Esta es una colección de script
 [Not a Spanish speaker? No worries! Click here for the English version](https://github.com/dsxzcq/random-scripts/blob/main/README.MD)
 ---
 
-## Instalador de Hyprdots Random
+## Instalador de Hyprdots
 
-El **Instalador de Hyprdots Random** es un script versátil diseñado para simplificar la instalación de varias configuraciones de dotfiles para Hyprland. En lugar de buscar y ejecutar manualmente diferentes scripts de instalación, esta herramienta proporciona una forma centralizada y fácil de usar para instalar tu configuración de Hyprdots preferida.
+El **Instalador de Hyprdots** es un script versátil diseñado para simplificar la instalación de varias configuraciones de dotfiles para Hyprland. En lugar de buscar y ejecutar manualmente diferentes scripts de instalación, esta herramienta proporciona una forma centralizada y fácil de usar para instalar tu configuración de Hyprdots preferida.
 
 ### Características
 - **Múltiples opciones**: Elige entre una lista seleccionada de configuraciones populares de Hyprdots.
@@ -38,6 +38,11 @@ bash <(curl -s https://raw.githubusercontent.com/dsxzcq/random-scripts/main/rand
 ### Notas
 - **HyDE OLD Hyprdots**: Si seleccionas los Hyprdots descontinuados de HyDE OLD, el script te advertirá antes de continuar. Puedes elegir seguir adelante o volver al menú principal.
 - **Personalización**: Siéntete libre de modificar el script para agregar o eliminar opciones de Hyprdots según sea necesario.
+- **Usuarios de CachyOS**: Si estás usando **CachyOS con Hyprland**, ejecuta el siguiente comando **antes de instalar cualquier Hyprdot** para evitar conflictos:
+
+  ```bash
+  sudo pacman -R mako cachyos-hyprland-settings
+  ```
 
 ---
 
