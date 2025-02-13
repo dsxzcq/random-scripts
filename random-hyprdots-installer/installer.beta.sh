@@ -18,7 +18,6 @@ echo "1) English"
 echo "2) Español"
 read -p "Enter the number corresponding to your choice: " lang_choice
 
-# Load language strings from GitHub
 if [[ $lang_choice == 1 ]]; then
     lang="en"
 elif [[ $lang_choice == 2 ]]; then
@@ -28,11 +27,9 @@ else
     exit 1
 fi
 
-# Fetch language strings
 lang_file="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/random-hyprdots-installer/langs.json"
 lang_strings=$(curl -s "$lang_file" | jq -r ".$lang")
 
-# Function to get a language string
 get_string() {
     echo "$lang_strings" | jq -r ".$1"
 }
@@ -51,7 +48,6 @@ EOF
 echo "$(get_string "title")"
 echo -e "\033[0m"
 
-# Ask for sudo password
 echo "$(get_string "sudo_prompt")"
 sudo -v
 if [ $? -ne 0 ]; then
@@ -59,7 +55,6 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Function to show the main menu
 show_menu() {
     echo "$(get_string "menu_title")"
     echo "1) $(get_string "menu_option1")"
@@ -70,8 +65,6 @@ show_menu() {
     echo "6) $(get_string "menu_option6")"
     echo
 }
-
-# Main loop
 while true; do
     show_menu
     read -p "$(get_string "menu_prompt") " choice
