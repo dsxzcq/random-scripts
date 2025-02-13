@@ -5,9 +5,9 @@ Bienvenido a mi repositorio **Random Scripts**. Esta es una colección de script
 [Not a Spanish speaker? No worries! Click here for the English version](https://github.com/dsxzcq/random-scripts/blob/main/README.MD)
 ---
 
-## Instalador de Hyprdots
+## Instalador de Hyprdots Random
 
-El **Instalador de Hyprdots** es un script versátil diseñado para simplificar la instalación de varias configuraciones de dotfiles para Hyprland. En lugar de buscar y ejecutar manualmente diferentes scripts de instalación, esta herramienta proporciona una forma centralizada y fácil de usar para instalar tu configuración de Hyprdots preferida.
+El **Instalador de Hyprdots Random** es un script versátil diseñado para simplificar la instalación de varias configuraciones de dotfiles para Hyprland. En lugar de buscar y ejecutar manualmente diferentes scripts de instalación, esta herramienta proporciona una forma centralizada y fácil de usar para instalar tu configuración de Hyprdots preferida.
 
 ### Características
 - **Múltiples opciones**: Elige entre una lista seleccionada de configuraciones populares de Hyprdots.
