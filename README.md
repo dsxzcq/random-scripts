@@ -2,7 +2,7 @@
 
 Welcome to my **Random Scripts** repository! This is a collection of unique and niche scripts I've created for various purposes. Whether you're looking for automation, customization, or just something out of the ordinary, you might find it here.
 
-[¿No sabes inglés? Haz clic aquí para ver la versión en español.](https://github.com/dsxzcq/random-scripts/blob/main/README.ES.MD)
+[¿No entiendes inglés? ¡No hay problema! Haz clic aquí para la versión en español](https://github.com/dsxzcq/random-scripts/blob/main/README.ES.MD)
 ---
 
 ## Hyprdots Installer
