@@ -1,6 +1,6 @@
 {
   "en": {
-    "title": "GDT Dotfiles for Hyprland",
+    "title": "Random Hyprdots Installer for Hyprland",
     "sudo_prompt": ":: Please enter your password to grant administrative privileges.",
     "sudo_fail": ":: Incorrect password or no sudo privileges. Exiting...",
     "menu_title": "Please choose between:",
@@ -24,7 +24,7 @@
     "install_complete": "Installation complete."
   },
   "es": {
-    "title": "GDT Dotfiles para Hyprland",
+    "title": "Random Hyprdots Installer para Hyprland",
     "sudo_prompt": ":: Por favor, ingresa tu contraseña para otorgar privilegios administrativos.",
     "sudo_fail": ":: Contraseña incorrecta o sin privilegios de sudo. Saliendo...",
     "menu_title": "Por favor, elige entre:",
