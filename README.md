@@ -5,9 +5,9 @@ Welcome to my **Random Scripts** repository! This is a collection of unique and 
 [¿No entiendes inglés? ¡No hay problema! Haz clic aquí para la versión en español](https://github.com/dsxzcq/random-scripts/blob/main/README.ES.MD)
 ---
 
-## Hyprdots Installer
+## Hyprdots Installer Random
 
-The **Hyprdots Installer** is a versatile script designed to simplify the installation of various Hyprland dotfiles configurations. Instead of manually searching for and running different installation scripts, this tool provides a centralized and user-friendly way to install your preferred Hyprdots setup.
+The **Hyprdots Installer Random** is a versatile script designed to simplify the installation of various Hyprland dotfiles configurations. Instead of manually searching for and running different installation scripts, this tool provides a centralized and user-friendly way to install your preferred Hyprdots setup.
 
 ### Features
 - **Multiple Options**: Choose from a curated list of popular Hyprdots configurations.
@@ -18,7 +18,7 @@ The **Hyprdots Installer** is a versatile script designed to simplify the instal
 
 ### Installation
 
-To run the **Hyprdots Installer**, simply execute the following command in your terminal:
+To run the **Hyprdots Installer Random**, simply execute the following command in your terminal:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/dsxzcq/random-scripts/main/random-hyprdots-installer.sh)
@@ -38,6 +38,11 @@ bash <(curl -s https://raw.githubusercontent.com/dsxzcq/random-scripts/main/rand
 ### Notes
 - **HyDE OLD Hyprdots**: If you select the discontinued HyDE OLD Hyprdots, the script will warn you before proceeding. You can choose to continue or return to the main menu.
 - **Customization**: Feel free to modify the script to add or remove Hyprdots options as needed.
+- **CachyOS Users**: If you are using **CachyOS with Hyprland**, run the following command **before installing any Hyprdots** to avoid conflicts:
+
+  ```bash
+  sudo pacman -R mako cachyos-hyprland-settings
+  ```
 
 ---
 
@@ -63,4 +68,4 @@ This script is designed to make your life easier while exploring the world of Hy
 
 ---
 
-Enjoy your Hyprland journey with the **Random Hyprdots Installer**! 🚀
+Enjoy your Hyprland journey with the **Hyprdots Installer Random**! 🚀
