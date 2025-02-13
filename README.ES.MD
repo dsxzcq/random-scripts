@@ -21,7 +21,7 @@ El **Instalador de Hyprdots Random** es un script versátil diseñado para simpl
 Para ejecutar el **Instalador de Hyprdots Random**, simplemente usa el siguiente comando en tu terminal:
 
 ```bash
-bash <(curl -s bash <(curl -s https://raw.githubusercontent.com/dsxzcq/random-scripts/refs/heads/main/random-hyprdots-installer/installer.sh))
+bash <(curl -s https://raw.githubusercontent.com/dsxzcq/random-scripts/refs/heads/main/random-hyprdots-installer/installer.sh)
 ```
 
 ---
