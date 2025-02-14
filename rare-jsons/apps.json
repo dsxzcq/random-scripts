@@ -1,20 +1,43 @@
 {
-    "ArceusXNeoAndroid": {
-        "status": "up",
-        "download": "https://android.spdmteam.com/"
+    "WaveDevs": {
+        "Wave": {
+            "status": "unknown",
+            "download": "https://cdn.getwave.gg/userinterface/Wave-Setup.exe"
+        }
     },
-    "ArceusXNeoAndroidVNG": {
-        "status": "up",
-        "download": "https://vng.spdmteam.com/"
+    "SPDMTEAM": {
+        "ArceusXNeoAndroid": {
+            "status": "up",
+            "download": "https://android.spdmteam.com/"
+        },
+        "ArceusXNeoAndroidVNG": {
+            "status": "up",
+            "download": "https://vng.spdmteam.com/"
+        },
+        "ArceusXNeoIOS": {
+            "status": "up",
+            "download": "https://ios.spdmteam.com/"
+        }
     },
-    "ArceusXNeoIOS": {
-        "status": "up",
-        "download": "https://ios.spdmteam.com/"
+    "CodexTeam": {
+        "CodexAndroid": {
+            "status": "up",
+            "download": "https://www.mediafire.com/file/3igryhzaok0fhjp/Codex+v2.658.460.apk/file"
+        },
+        "CodexAndroidVNG": {
+            "status": "up",
+            "download": "https://www.mediafire.com/file/p974quqr1ndgzcq/Codex+VNG+v2.658.460.apk/file"
+        },
+        "CodexIOS": {
+            "status": "up",
+            "download": "https://codex.lol/download/ios"
+        }
     },
     "help": {
         "up": "working",
         "down": "updating/patched",
-        "dead": "discontinued"
+        "dead": "discontinued",
+        "unknown": "idk"
     }
 }
   
