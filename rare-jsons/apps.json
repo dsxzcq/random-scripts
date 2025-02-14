@@ -1,5 +1,20 @@
 {
-  "ArceusXNeoAndroid": "https://android.spdmteam.com/",
-  "ArceusXNeoAndroidVNG": "https://vng.spdmteam.com/",
-  "ArceusXNeoIOS": "https://ios.spdmteam.com/"
+    "ArceusXNeoAndroid": {
+        "status": "up",
+        "download": "https://android.spdmteam.com/"
+    },
+    "ArceusXNeoAndroidVNG": {
+        "status": "up",
+        "download": "https://vng.spdmteam.com/"
+    },
+    "ArceusXNeoIOS": {
+        "status": "up",
+        "download": "https://ios.spdmteam.com/"
+    },
+    "help": {
+        "up": "working",
+        "down": "updating/patched",
+        "dead": "discontinued"
+    }
 }
+  
