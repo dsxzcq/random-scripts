@@ -11,17 +11,15 @@
     "menu_option5": "JaKooLit HyprDots",
     "menu_option6": "Exit",
     "menu_prompt": "Enter the number corresponding to your choice:",
-    "installing_option1": "Installing My Linux For Work",
-    "installing_option2": "Installing End 4 Hyprdots",
-    "installing_option3": "Installing HyDE OLD Hyprdots",
-    "installing_option4": "Installing HyDE Hyprdots",
-    "installing_option5": "Installing JaKooLit HyprDots",
+    "installing_option_prefix": "Installing",
     "warning_old": "WARNING: HyDE OLD Hyprdots is discontinued and no longer supported.",
     "confirm_install": "Do you want to continue with the installation",
     "install_canceled": "Installation canceled. Returning to the main menu...",
     "invalid_choice": "Invalid choice. Please try again.",
     "exiting": "Exiting...",
-    "install_complete": "Installation complete."
+    "install_complete": "Installation complete.",
+    "select_distro": "Select the distribution you want to install for:",
+    "distro_prompt": "Enter the number corresponding to your choice:"
   },
   "es": {
     "title": "Random Hyprdots Installer para Hyprland",
@@ -35,16 +33,14 @@
     "menu_option5": "JaKooLit HyprDots",
     "menu_option6": "Salir",
     "menu_prompt": "Ingresa el número correspondiente a tu elección:",
-    "installing_option1": "Instalando My Linux For Work",
-    "installing_option2": "Instalando End 4 Hyprdots",
-    "installing_option3": "Instalando HyDE OLD Hyprdots",
-    "installing_option4": "Instalando HyDE Hyprdots",
-    "installing_option5": "Instalando JaKooLit HyprDots",
+    "installing_option_prefix": "Instalando",
     "warning_old": "ADVERTENCIA: HyDE OLD Hyprdots está descontinuado y ya no tiene soporte.",
     "confirm_install": "¿Deseas continuar con la instalación?",
     "install_canceled": "Instalación cancelada. Volviendo al menú principal...",
     "invalid_choice": "Opción inválida. Por favor, intenta nuevamente.",
     "exiting": "Saliendo...",
-    "install_complete": "Instalación completada."
+    "install_complete": "Instalación completada.",
+    "select_distro": "Selecciona la distribución para la cual deseas instalar:",
+    "distro_prompt": "Ingresa el número correspondiente a tu elección:"
   }
 }
