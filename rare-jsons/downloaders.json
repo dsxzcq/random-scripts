@@ -1,5 +1,5 @@
 {
-  "My Linux For Work": {
+  "ML4W Hyprdots": {
     "Arch Linux": "bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup-arch.sh)",
     "Fedora": "bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup-fedora.sh)"
   },
