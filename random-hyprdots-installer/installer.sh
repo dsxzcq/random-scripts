@@ -2,7 +2,7 @@
 set -e
 
 DOWNLOADERS_FILE="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/rare-jsons/downloaders.json"
-lang_file="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/rare-jsons/langs.json"
+lang_file="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/rare-jsons/rha-langs.json"
 
 function get_string() {
     echo "$lang_strings" | jq -r ".$1"
