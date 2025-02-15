@@ -20,12 +20,7 @@
     "install_complete": "Installation complete.",
     "select_distro": "Select the distribution you want to install for:",
     "distro_prompt": "Enter the number corresponding to your choice:",
-    "initial_menu": "Welcome to the Random Hyprdots Installer!",
-    "continue_script": "Continue with the script",
-    "continuing_script": "Continuing with the script...",
-    "process_complete": "Process complete.",
-    "jq_not_installed": "The package 'jq' is required to run this script.",
-    "install_jq_instructions": "Please install it using your package manager:\nFor Arch Linux: sudo pacman -S jq\nFor Fedora: sudo dnf install jq\nFor Ubuntu: sudo apt install jq"
+    "process_complete": "Process complete."
   },
   "es": {
     "title": "Random Hyprdots Installer para Hyprland",
@@ -48,11 +43,6 @@
     "install_complete": "Instalación completada.",
     "select_distro": "Selecciona la distribución para la cual deseas instalar:",
     "distro_prompt": "Ingresa el número correspondiente a tu elección:",
-    "initial_menu": "¡Bienvenido al instalador de Random Hyprdots!",
-    "continue_script": "Continuar con el script",
-    "continuing_script": "Continuando con el script...",
-    "process_complete": "Proceso completado.",
-    "jq_not_installed": "El paquete 'jq' es necesario para ejecutar este script.",
-    "install_jq_instructions": "Por favor, instálalo usando tu gestor de paquetes:\nPara Arch Linux: sudo pacman -S jq\nPara Fedora: sudo dnf install jq\nPara Ubuntu: sudo apt install jq"
+    "process_complete": "Proceso completado."
   }
 }
