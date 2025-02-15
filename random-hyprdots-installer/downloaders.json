@@ -1,0 +1,23 @@
+{
+  "My Linux For Work": {
+    "Arch Linux": "bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup-arch.sh)",
+    "Fedora": "bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/dotfiles/main/setup-fedora.sh)"
+  },
+  "End 4 Hyprdots": {
+    "Arch Linux": "bash <(curl -s 'https://end-4.github.io/dots-hyprland-wiki/setup.sh')",
+  },
+  "HyDE OLD Hyprdots": {
+    "Arch Linux": "pacman -S --needed git base-devel && git clone --depth 1 https://github.com/prasanthrangan/hyprdots ~/HyDE && cd ~/HyDE/Scripts && ./install.sh"
+  },
+  "HyDE Hyprdots": {
+    "Arch Linux": "pacman -S --needed git base-devel && git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE && cd ~/HyDE/Scripts && ./install.sh",
+  },
+  "JaKooLit HyprDots": {
+    "Arch Linux": "git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Arch-Hyprland && cd ~/Arch-Hyprland && chmod +x install.sh && ./install.sh",
+    "OpenSUSE Tumbleweed": "git clone --depth=1 https://github.com/JaKooLit/OpenSuse-Hyprland.git ~/OpenSuse-Hyprland && cd ~/OpenSuse-Hyprland && chmod +x install.sh && ./install.sh",
+    "Fedora": "git clone --depth=1 https://github.com/JaKooLit/Fedora-Hyprland.git ~/Fedora-Hyprland && cd ~/Fedora-Hyprland && chmod +x install.sh && ./install.sh",
+    "NixOS": "nix-shell -p git vim curl pciutils sh <(curl -L https://github.com/JaKooLit/NixOS-Hyprland/raw/main/auto-install.sh)",
+    "Ubuntu 24.04 LTS": "git clone -b 24.04 --depth 1 https://github.com/JaKooLit/Ubuntu-Hyprland.git ~/Ubuntu-Hyprland-24.04 && cd ~/Ubuntu-Hyprland-24.04 && chmod +x install.sh && ./install.sh",
+    "Ubuntu 24.10": "git clone --depth=1 -b 24.10 https://github.com/JaKooLit/Ubuntu-Hyprland.git ~/Ubuntu-Hyprland-24.10 && cd ~/Ubuntu-Hyprland-24.10 && chmod +x install.sh && ./install.sh",
+  }
+}
