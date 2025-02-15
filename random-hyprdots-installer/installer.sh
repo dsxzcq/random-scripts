@@ -9,7 +9,6 @@ function get_string() {
 }
 
 function check_sudo() {
-    echo "$(get_string "sudo_prompt")"
     sudo -v || { echo "$(get_string "sudo_fail")"; exit 1; }
 }
 
@@ -17,7 +16,13 @@ function check_jq() {
     if ! command -v jq &> /dev/null; then
         echo ":: $(get_string "jq_not_installed")"
         echo ":: $(get_string "install_jq_instructions")"
-        exit 1
+        read -p ":: $(get_string "confirm_jq_installation") (y/N): " confirm
+        if [[ $confirm =~ ^[Yy]$ ]]; then
+            echo ":: $(get_string "continuing_script")"
+        else
+            echo ":: $(get_string "exiting")"
+            exit 1
+        fi
     fi
 }
 
@@ -89,26 +94,10 @@ EOF
 echo "$(get_string "title")"
 echo -e "\033[0m"
 
+echo "$(get_string "sudo_prompt")"
 check_sudo
-check_jq
 
-echo "$(get_string "initial_menu")"
-echo "1) $(get_string "continue_script")"
-echo "2) $(get_string "menu_option6")"
-read -p "$(get_string "menu_prompt") " initial_choice
-case $initial_choice in
-    1)
-        echo ":: $(get_string "continuing_script")"
-        ;;
-    2)
-        echo ":: $(get_string "exiting")"
-        exit 0
-        ;;
-    *)
-        echo ":: $(get_string "invalid_choice")"
-        exit 1
-        ;;
-esac
+check_jq
 
 load_downloaders
 
