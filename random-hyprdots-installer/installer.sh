@@ -27,7 +27,8 @@ function load_downloaders() {
 function show_hyprdots_menu() {
     echo "$(get_string "menu_title")"
     i=1
-    echo "$downloaders" | jq -r 'keys[]' | while IFS= read -r option; do
+    mapfile -t hyprdots_list < <(echo "$downloaders" | jq -r 'keys[]')
+    for option in "${hyprdots_list[@]}"; do
         echo "$i) $option"
         hyprdots_options["$i"]="$option"
         ((i++))
@@ -39,7 +40,8 @@ function show_distro_menu() {
     local selected_hyprdot="$1"
     echo "$(get_string "select_distro")"
     i=1
-    echo "$downloaders" | jq -r ".[\"$selected_hyprdot\"] | keys[]" | while IFS= read -r distro; do
+    mapfile -t distro_list < <(echo "$downloaders" | jq -r ".[\"$selected_hyprdot\"] | keys[]")
+    for distro in "${distro_list[@]}"; do
         echo "$i) $distro"
         distro_options["$i"]="$distro"
         ((i++))
