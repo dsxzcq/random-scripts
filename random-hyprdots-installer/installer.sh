@@ -12,20 +12,6 @@ function check_sudo() {
     sudo -v || { echo "$(get_string "sudo_fail")"; exit 1; }
 }
 
-function check_jq() {
-    if ! command -v jq &> /dev/null; then
-        echo ":: $(get_string "jq_not_installed")"
-        echo ":: $(get_string "install_jq_instructions")"
-        read -p ":: $(get_string "confirm_jq_installation") (y/N): " confirm
-        if [[ $confirm =~ ^[Yy]$ ]]; then
-            echo ":: $(get_string "continuing_script")"
-        else
-            echo ":: $(get_string "exiting")"
-            exit 1
-        fi
-    fi
-}
-
 function load_downloaders() {
     downloaders=$(curl -s "$DOWNLOADERS_FILE")
 }
@@ -96,8 +82,6 @@ echo -e "\033[0m"
 
 echo "$(get_string "sudo_prompt")"
 check_sudo
-
-check_jq
 
 load_downloaders
 
