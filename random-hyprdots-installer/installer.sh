@@ -1,15 +1,9 @@
 #!/bin/bash
 set -e
 
-# -----------------------------------------------------
-# Global
-# -----------------------------------------------------
 DOWNLOADERS_FILE="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/downloaders.json"
 lang_file="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/random-hyprdots-installer/langs.json"
 
-# -----------------------------------------------------
-# Functions
-# -----------------------------------------------------
 function get_string() {
     echo "$lang_strings" | jq -r ".$1"
 }
@@ -17,6 +11,14 @@ function get_string() {
 function check_sudo() {
     echo "$(get_string "sudo_prompt")"
     sudo -v || { echo "$(get_string "sudo_fail")"; exit 1; }
+}
+
+function check_jq() {
+    if ! command -v jq &> /dev/null; then
+        echo ":: $(get_string "jq_not_installed")"
+        echo ":: $(get_string "install_jq_instructions")"
+        exit 1
+    fi
 }
 
 function load_downloaders() {
@@ -51,11 +53,8 @@ function cleanup() {
     rm -rf ~/HyDE ~/Arch-Hyprland 2>/dev/null || true
 }
 
-trap cleanup EXIT 
+trap cleanup EXIT
 
-# -----------------------------------------------------
-# Lang Select
-# -----------------------------------------------------
 echo "Select your language / Selecciona tu idioma:"
 echo "1) English"
 echo "2) Español"
@@ -71,9 +70,6 @@ fi
 
 lang_strings=$(curl -s "$lang_file" | jq -r ".$lang")
 
-# -----------------------------------------------------
-# Header
-# -----------------------------------------------------
 clear
 echo -e "\033[0;32m"
 cat <<"EOF"
@@ -94,12 +90,28 @@ echo "$(get_string "title")"
 echo -e "\033[0m"
 
 check_sudo
+check_jq
+
+echo "$(get_string "initial_menu")"
+echo "1) $(get_string "continue_script")"
+echo "2) $(get_string "menu_option6")"
+read -p "$(get_string "menu_prompt") " initial_choice
+case $initial_choice in
+    1)
+        echo ":: $(get_string "continuing_script")"
+        ;;
+    2)
+        echo ":: $(get_string "exiting")"
+        exit 0
+        ;;
+    *)
+        echo ":: $(get_string "invalid_choice")"
+        exit 1
+        ;;
+esac
 
 load_downloaders
 
-# -----------------------------------------------------
-# Menu
-# -----------------------------------------------------
 declare -A hyprdots_options
 show_hyprdots_menu
 read -p "$(get_string "menu_prompt") " hyprdot_choice
@@ -113,14 +125,14 @@ else
     exit 1
 fi
 
-# -----------------------------------------------------
-# Distro Select
-# -----------------------------------------------------
 declare -A distro_options
 show_distro_menu "$selected_hyprdot"
 read -p "$(get_string "distro_prompt") " distro_choice
 if [[ $distro_choice -ge 1 && $distro_choice -le ${#distro_options[@]} ]]; then
     selected_distro="${distro_options[$distro_choice]}"
+    downloader_command=$(echo "$downloaders" | jq -r ".[\"$selected_hyprdot\"][\"$selected_distro\"]")
+    echo ":: $(get_string "installing_option_prefix") $selected_hyprdot ($selected_distro)"
+    eval "$downloader_command"
 elif [[ $distro_choice -eq $((${#distro_options[@]} + 1)) ]]; then
     echo ":: $(get_string "exiting")"
     exit 0
@@ -129,11 +141,4 @@ else
     exit 1
 fi
 
-# -----------------------------------------------------
-# Load
-# -----------------------------------------------------
-downloader_command=$(echo "$downloaders" | jq -r ".[\"$selected_hyprdot\"][\"$selected_distro\"]")
-echo ":: $(get_string "installing_option_prefix") $selected_hyprdot ($selected_distro)"
-eval "$downloader_command"
-
-echo ":: $(get_string "install_complete")"
+echo ":: $(get_string "process_complete")"
