@@ -14,6 +14,14 @@ function check_sudo() {
 
 function load_downloaders() {
     downloaders=$(curl -s "$DOWNLOADERS_FILE")
+    if [[ -z "$downloaders" ]]; then
+        echo ":: $(get_string "download_failed")"
+        exit 1
+    fi
+    if ! echo "$downloaders" | jq . >/dev/null 2>&1; then
+        echo ":: $(get_string "invalid_json")"
+        exit 1
+    fi
 }
 
 function show_hyprdots_menu() {
