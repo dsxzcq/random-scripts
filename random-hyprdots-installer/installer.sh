@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-DOWNLOADERS_FILE="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/rare-jsons/downloaders.json"
-lang_file="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/rare-jsons/rha-langs.json"
+DOWNLOADERS_FILE="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/rare-jsons/rhi-downloaders.json"
+lang_file="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/rare-jsons/rhi-langs.json"
 
 function get_string() {
     echo "$lang_strings" | jq -r ".$1"
