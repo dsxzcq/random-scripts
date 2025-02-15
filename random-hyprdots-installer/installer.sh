@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DOWNLOADERS_FILE="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/downloaders.json"
+DOWNLOADERS_FILE="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/random-hyprdots-installer/downloaders.json"
 lang_file="https://raw.githubusercontent.com/dsxzcq/random-scripts/main/random-hyprdots-installer/langs.json"
 
 function get_string() {
